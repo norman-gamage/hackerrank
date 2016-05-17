@@ -3,16 +3,16 @@
  * URL            https://www.hackerrank.com/challenges/time-conversion
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Read input
-  var time = readLine();
+  let time = readLine();
 
   // AM/PM to 24-hour
-  var h = Number(time.substring(0, 2)) % 12;
+  let h = Number(time.substring(0, 2)) % 12;
   h += (time.charAt(8) === 'P') ? 12 : 0;
 
   // Output

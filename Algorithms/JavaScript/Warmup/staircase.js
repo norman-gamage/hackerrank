@@ -3,20 +3,19 @@
  * URL            https://www.hackerrank.com/challenges/staircase
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Read input
-  var n = Number(readLine());
+  let N = Number(readLine());
 
   // Output
-  var i, j, row;
-  for (i = 1; i < n + 1; i++) {
-    row = "";
-    for (j = 0; j < n; j++) {
-      row += (j < n - i) ? " " : "#";
+  for (let i = 1; i < N + 1; i++) {
+    let row = "";
+    for (let j = 0; j < N; j++) {
+      row += (j < N - i) ? " " : "#";
     }
     console.log(row);
   }

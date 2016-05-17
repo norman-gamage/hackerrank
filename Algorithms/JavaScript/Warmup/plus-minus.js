@@ -3,17 +3,19 @@
  * URL            https://www.hackerrank.com/challenges/plus-minus
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Read input
-  var n = Number(readLine()),
-    arr = readLine().split(' ').map(Number);
+  let N = Number(readLine()),
+    arr = readLine().split(' ').map(Number),
+    log = x => console.log(x),
+    filter = x => arr.filter(x).length / N;
 
   // Output
-  console.log(arr.filter(function (a) { return a > 0 }).length / n);
-  console.log(arr.filter(function (a) { return a < 0 }).length / n);
-  console.log(arr.filter(function (a) { return a === 0 }).length / n);
+  log(filter(a => a > 0));
+  log(filter(a => a < 0));
+  log(filter(a => a === 0));
 }

@@ -3,17 +3,17 @@
  * URL            https://www.hackerrank.com/challenges/kaprekar-numbers
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 28
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Dependencies
-  var BigNumber = require("bignumber.js");
+  let BigNumber = require("bignumber.js");
 
   // Methods
-  var numPartition = function (x) {
-    var sq, len, d, a, left, right, i;
+  let numPartition = function (x) {
+    let sq, len, d, a, left, right;
 
     if (x.lessThan(10)) {
       return (x.equals(1)) ? true : false;
@@ -27,7 +27,7 @@ function main() {
     d = Math.round(len / 2);
     a = [d, len - d];
 
-    for (i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
       left = new BigNumber(x.substring(0, a[i]));
       right = new BigNumber(x.substring(a[i], len));
 
@@ -41,19 +41,13 @@ function main() {
   }
 
   // Read input
-  var input = input.split('\n'),
-    p = Number(input[0]),
-    q = Number(input[1]),
-    tmp, arr = [], k;
+  input = input.split('\n');
+  let [p, q] = input.map(Number), arr = [];
 
   // Calculcate
-  if (p > q) {
-    tmp = p;
-    p = q;
-    q = tmp;
-  }
+  if (p > q) { [p, q] = [q, p] }
 
-  for (k = p; k <= q; k++) {
+  for (let k = p; k <= q; k++) {
     if (numPartition(new BigNumber(Math.pow(k, 2)))) {
       arr.push(k);
     }

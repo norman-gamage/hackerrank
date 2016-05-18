@@ -3,43 +3,36 @@
  * URL            https://www.hackerrank.com/challenges/manasa-and-stones
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 28
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Methods
-  var padDigits = function (number, digits) {
-    return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
-  }
+  let padDigits = (number, digits) => Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
 
   // Read input
-  var input = input.split('\n'),
-    line = 0,
-    readLine = function () {
-      return input[line++];
-    },
+  input = input.split('\n');
+  let line = 0,
+    readLine = () => input[line++],
     t = readLine(),
-    z = 0, i, n, a, b, tmp, j, sum, set;
+    z = 0, n, a, b, sum, set;
 
   // Calculate + Output
-  for (i = 0; i < t; i++) {
+  for (let i = 0; i < t; i++) {
     n = readLine();
     a = Number(readLine());
     b = Number(readLine());
+    set = new Set();
 
     if (a > b) {
-      tmp = a;
-      a = b;
-      b = tmp;
+      [a, b] = [b, a]
     }
 
     sum = a * (n - 1);
-
-    set = new Set();
     set.add(sum);
 
-    for (j = 0; j < n - 1; j++) {
+    for (let j = 0; j < n - 1; j++) {
       sum += b - a;
       set.add(sum);
     }

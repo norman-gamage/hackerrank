@@ -3,20 +3,20 @@
  * URL            https://www.hackerrank.com/challenges/encryption
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 28
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Read input
-  var s = readLine(),
+  let s = readLine(),
     r = Math.floor(Math.sqrt(s.length)),
     c = Math.ceil(Math.sqrt(s.length)),
-    i, j, output = "";
+    output = "";
 
   // Encrypt
-  for (i = 0; i < c; i++) {
-    j = i;
+  for (let i = 0; i < c; i++) {
+    let j = i;
     while (j < s.length) {
       output += s[j];
       j += c;

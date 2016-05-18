@@ -3,22 +3,22 @@
  * URL            https://www.hackerrank.com/challenges/cavity-map
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function processData(input) {
   // Read input
-  var n = Number(readLine()),
-    grid = [], i, j, c, u, d, l, r, tmp;
+  let n = Number(readLine()),
+    grid = [], c, u, d, l, r;
 
-  for (i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     grid[i] = readLine().split('').map(Number);
   }
 
   // Search
-  for (i = 1; i < n - 1; i++) {
-    for (j = 1; j < n - 1; j++) {
+  for (let i = 1; i < n - 1; i++) {
+    for (let j = 1; j < n - 1; j++) {
       c = grid[i][j];
       u = grid[i - 1][j];
       d = grid[i + 1][j];
@@ -32,7 +32,7 @@ function processData(input) {
   }
 
   // Output
-  for (i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     console.log(grid[i].join(''));
   }
 }

@@ -3,17 +3,17 @@
  * URL            https://www.hackerrank.com/challenges/chocolate-feast
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function main() {
   // Read input
-  var T = Number(readLine()),
-    i, t, n, c, m, w, numC, r;
+  let T = Number(readLine()),
+    t, n, c, m, r, w, numC;
 
   // Calculate + Output
-  for (i = 0; i < T; i++) {
+  for (let i = 0; i < T; i++) {
     t = readLine().split(' ').map(Number);
     n = t[0];
     c = t[1];

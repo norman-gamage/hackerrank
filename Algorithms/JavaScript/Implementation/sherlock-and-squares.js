@@ -3,29 +3,24 @@
  * URL            https://www.hackerrank.com/challenges/sherlock-and-squares
  *
  * Author         Norman Gamage <norman.gamage@gmail.com>
- * Version        1.0
- * Last Update    2016 Apr 27
+ * Version        2.0
+ * Last Update    2016 May 18
  */
 
 function processData(input) {
   // Read input
-  var input = input.split('\n'),
-    line = 0,
-    readLine = function () {
-      return input[line++];
-    },
-    N = readLine(),
-    i, arr, min, max;
+  input = input.split('\n');
+  let line = 0,
+    readLine = () => input[line++],
+    N = readLine(), arr, min, max;
 
-  for (i = 0; i < N; i++) {
+  for (let i = 0; i < N; i++) {
     arr = readLine().split(' ').map(Number);
 
     if (arr[0] < arr[1]) {
-      min = arr[0];
-      max = arr[1];
+      [min, max] = arr;
     } else {
-      min = arr[1];
-      max = arr[0];
+      [max, min] = arr;
     }
 
     // Calculate + Output

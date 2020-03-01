@@ -1,9 +1,5 @@
 # hackerrank
-Solutions for CodeChallenges at HackerRank
+Solutions for HackerRank practice problems.
 
-**Update** (2016 May 18):<br/>
-Solutions with <code>v2.0</code> or greater are in <code>ES6</code> syntax.
-<br/>
-<br/>
-**Update** (2016 May 03):<br/>
-Solutions are in JavaScript <code>ES5</code>.
+**Update** (2020 Mar 01):<br/>
+Old solutions pre-dating 2020 were moved to <code>__old__</code> folder.

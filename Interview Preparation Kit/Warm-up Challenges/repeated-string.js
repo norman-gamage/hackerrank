@@ -15,7 +15,7 @@ function repeatedString(s, n) {
 
   // Get number of 'a' characters in a string
   const getNumAChars = str => {
-    return BigInt(str.split("").filter(c => c === "a").length);
+    return BigInt(str.split('').filter(c => c === 'a').length);
   };
 
   // Number of 'a' characters in repeating section

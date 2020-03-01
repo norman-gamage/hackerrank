@@ -8,7 +8,7 @@
  */
 
 function countingValleys(n, s) {
-  s = s.split("");
+  s = s.split('');
   let prev = 0; // Previous altitude
   let curr = 0; // Current altitude
   let cnt = 0; // Valley count
@@ -18,7 +18,7 @@ function countingValleys(n, s) {
     prev = curr;
 
     // Calculate new altitude
-    curr += v === "U" ? 1 : -1;
+    curr += v === 'U' ? 1 : -1;
 
     // Back to sea-level check
     if (prev === -1 && curr === 0) {
